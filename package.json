@@ -1,6 +1,6 @@
 {
   "name": "velo-data-vue-render",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A powerful data visualization renderer for Vue 3, supporting charts, 3D effects, and rich UI components",
   "author": "ShutDown",
   "license": "MIT",
