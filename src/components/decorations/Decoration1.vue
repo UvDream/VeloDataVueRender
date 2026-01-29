@@ -32,38 +32,42 @@ const title = computed(() => props.item.props.content || '')
 
 .line {
     flex: 1;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #409eff, transparent);
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--decoration-color, #409eff), transparent);
     position: relative;
 }
 
 .line.left {
-    background: linear-gradient(90deg, transparent, #409eff);
+    background: linear-gradient(90deg, transparent, var(--decoration-color, #409eff));
 }
 
 .line.right {
-    background: linear-gradient(90deg, #409eff, transparent);
+    background: linear-gradient(90deg, var(--decoration-color, #409eff), transparent);
 }
 
-.line::before,
 .line::after {
     content: '';
     position: absolute;
-    width: 8px;
-    height: 8px;
-    background: #409eff;
+    width: 6px;
+    height: 6px;
+    background: var(--decoration-color, #409eff);
     border-radius: 50%;
-    box-shadow: 0 0 6px #409eff;
+    box-shadow: 0 0 10px var(--decoration-color, #409eff);
+    top: -2.5px;
+    animation: pulse 2s ease-in-out infinite;
 }
 
 .line.left::after {
     right: 0;
-    top: -3px;
 }
 
-.line.right::before {
+.line.right::after {
     left: 0;
-    top: -3px;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.5); opacity: 1; }
 }
 
 .center-content {

@@ -670,8 +670,9 @@ export interface ComponentProps {
     textColor?: string // 文字颜色
     labelColor?: string // 标签颜色
     showLabels?: boolean // 显示标签
+    cardWidth?: number // 卡片宽度
+    cardHeight?: number // 卡片高度
     separator?: string // 分隔符
-
     // 容器组件属性
     containerPadding?: number | string // 内边距
     containerBackground?: string // 背景色
