@@ -195,7 +195,7 @@ onUnmounted(() => {
 })
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .velo-renderer-container {
   width: 100vw;
   height: 100vh;

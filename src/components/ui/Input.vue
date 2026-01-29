@@ -44,7 +44,7 @@ watch(() => props.item.props.value, (newValue) => {
 })
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .velo-input {
     font-family: inherit;
 }

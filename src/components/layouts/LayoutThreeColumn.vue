@@ -61,7 +61,7 @@ const rightStyle = computed(() => ({
 }))
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .layout-three-column {
     box-sizing: border-box;
 }

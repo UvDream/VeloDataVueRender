@@ -94,7 +94,7 @@ const bottomRightHighlightPath = computed(() => {
 })
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .border-box-2 {
   position: relative;
   overflow: hidden;

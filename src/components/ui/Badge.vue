@@ -24,7 +24,7 @@ const badgeColor = computed(() => props.item.props.badgeColor)
 const showZero = computed(() => props.item.props.showZero || false)
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .velo-badge {
     font-family: inherit;
 }

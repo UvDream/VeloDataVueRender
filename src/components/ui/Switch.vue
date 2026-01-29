@@ -34,7 +34,7 @@ watch(() => props.item.props.checked, (newValue) => {
 })
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .velo-switch {
     font-family: inherit;
 }

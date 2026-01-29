@@ -117,7 +117,7 @@ const pathLength = computed(() => {
 })
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .border-box-3 {
   position: relative;
   display: flex;

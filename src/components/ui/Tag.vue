@@ -27,7 +27,7 @@ const handleClose = () => {
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .velo-tag {
     font-family: inherit;
 }

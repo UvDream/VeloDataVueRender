@@ -36,7 +36,7 @@ const strokeColor = computed(() => {
 })
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .velo-progress {
     font-family: inherit;
 }

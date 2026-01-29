@@ -192,7 +192,7 @@ const handleClick = () => {
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .renderer-item {
   box-sizing: border-box;
 }

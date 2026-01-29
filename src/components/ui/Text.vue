@@ -49,7 +49,7 @@ const textStyle = computed<CSSProperties>(() => {
 })
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .text-component {
   word-wrap: break-word;
   word-break: break-word;

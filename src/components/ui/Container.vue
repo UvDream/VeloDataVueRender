@@ -51,7 +51,7 @@ const containerStyle = computed(() => {
 
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .velo-container {
     width: 100%;
     height: 100%;

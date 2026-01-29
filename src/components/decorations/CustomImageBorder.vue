@@ -36,7 +36,7 @@ const borderStyle = computed(() => {
 })
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .custom-image-border {
     position: relative;
     width: 100%;

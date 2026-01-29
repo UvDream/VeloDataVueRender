@@ -35,7 +35,7 @@ const containerStyle = computed(() => ({
 }))
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .border-box-4 {
   position: relative;
   width: 100%;

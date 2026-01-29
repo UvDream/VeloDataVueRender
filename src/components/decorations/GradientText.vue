@@ -29,7 +29,7 @@ const textStyle = computed(() => {
 })
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .gradient-text {
     background-clip: text;
     -webkit-background-clip: text;

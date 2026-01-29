@@ -31,7 +31,7 @@ const cardStyle = computed(() => ({
 }))
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .velo-card {
     font-family: inherit;
 }

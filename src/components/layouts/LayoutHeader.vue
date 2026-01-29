@@ -51,7 +51,7 @@ const headerStyle = computed(() => ({
 }))
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .layout-header {
     box-sizing: border-box;
 }

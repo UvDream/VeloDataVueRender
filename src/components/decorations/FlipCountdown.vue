@@ -203,7 +203,7 @@ watch([countdownMode, countdownDuration, targetDate], () => {
 })
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .flip-countdown {
   display: flex;
   align-items: center;

@@ -32,7 +32,7 @@ const handleClick = () => {
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .velo-button {
     font-family: inherit;
     transition: all 0.3s ease;

@@ -74,7 +74,7 @@ onUnmounted(() => {
 watch(() => [props.item.props, props.chartTheme], updateChart, { deep: true })
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .word-cloud-chart {
     width: 100%;
     height: 100%;

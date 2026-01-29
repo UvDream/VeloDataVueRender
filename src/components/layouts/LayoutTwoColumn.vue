@@ -79,7 +79,7 @@ const containerStyle = computed(() => ({
 const leftStyle = computed(() => ({}))
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .layout-two-column {
     box-sizing: border-box;
 }

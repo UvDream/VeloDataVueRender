@@ -21,7 +21,7 @@ const tableSize = computed(() => props.item.props.tableSize || 'middle')
 const pagination = computed(() => props.item.props.tablePagination !== false)
 </script>
 
-<style scoped>
+<style scoped lang="less">
 :deep(.ant-table) {
     background: transparent;
     color: #fff;

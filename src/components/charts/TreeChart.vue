@@ -45,7 +45,7 @@ onUnmounted(() => {
 watch(() => props.item.props, updateChart, { deep: true })
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .tree-chart {
   width: 100%;
   height: 100%;

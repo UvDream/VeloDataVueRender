@@ -25,4 +25,4 @@ export type {
 } from './types'
 
 // 样式
-import './styles/index.css'
+import './styles/index.less'

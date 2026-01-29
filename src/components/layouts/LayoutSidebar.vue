@@ -55,7 +55,7 @@ const sidebarStyle = computed(() => ({
 }))
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .layout-sidebar {
     box-sizing: border-box;
 }

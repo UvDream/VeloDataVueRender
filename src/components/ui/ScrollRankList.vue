@@ -45,7 +45,7 @@ onUnmounted(() => {
 })
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .scroll-rank-list {
     width: 100%;
     padding: 10px;

@@ -21,7 +21,7 @@ const props = defineProps<Decoration1Props>()
 const title = computed(() => props.item.props.content || '')
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .decoration-1 {
     display: flex;
     align-items: center;

@@ -112,7 +112,7 @@ const smallPolygonPoints = "27.6,4.8 38.4,4.8 35.4,7.8 30.6,7.8"
 const animationBarPoints = "9,54 9,63 7.2,66 7.2,75 7.8,78 7.8,110 8.4,110 8.4,66 9.6,66 9.6,54"
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .border-box-1 {
   position: relative;
   overflow: hidden;

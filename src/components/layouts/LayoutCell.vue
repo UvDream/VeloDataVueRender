@@ -38,7 +38,7 @@ const cellStyle = computed(() => ({
 }))
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .layout-cell {
     overflow: auto;
 }

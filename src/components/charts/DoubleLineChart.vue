@@ -55,7 +55,7 @@ watch(
 )
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .double-line-chart {
   width: 100%;
   height: 100%;

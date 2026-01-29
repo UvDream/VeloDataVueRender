@@ -41,7 +41,7 @@ const imageStyle = computed(() => ({
 }))
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .velo-image {
     width: 100%;
     height: 100%;

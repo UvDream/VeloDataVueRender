@@ -21,7 +21,7 @@ watch(() => props.item.props, () => {
 }, { deep: true })
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .city-map-chart {
     width: 100%;
     height: 100%;

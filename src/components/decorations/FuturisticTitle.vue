@@ -75,7 +75,7 @@ const subTitleStyle = computed(() => ({
 }))
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .futuristic-title-wrapper {
   width: 100%;
   height: 100%;

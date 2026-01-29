@@ -22,7 +22,7 @@ const avatarSize = computed(() => props.item.props.avatarSize || 64)
 const avatarShape = computed(() => props.item.props.avatarShape || 'circle')
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .velo-avatar {
     font-family: inherit;
 }

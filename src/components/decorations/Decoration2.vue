@@ -18,7 +18,7 @@ const lineStyle = computed(() => ({
 }))
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .decoration-2 {
     width: 100%;
     height: 2px;

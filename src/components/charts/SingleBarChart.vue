@@ -55,7 +55,7 @@ watch(
 )
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .single-bar-chart {
   width: 100%;
   height: 100%;

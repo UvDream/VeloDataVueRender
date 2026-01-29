@@ -48,7 +48,7 @@ const cardStyle = computed(() => ({
 }))
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .flip-card {
   position: relative;
   perspective: 1000px;

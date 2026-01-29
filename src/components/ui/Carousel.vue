@@ -53,7 +53,7 @@ const dotPosition = computed(() => config.value.dotPosition || 'bottom')
 
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .velo-carousel {
     width: 100%;
     height: 100%;

@@ -37,7 +37,7 @@ const toggleFullscreen = () => {
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .fullscreen-button {
     position: fixed;
     z-index: 9999;

@@ -45,7 +45,7 @@ const iconStyle = computed(() => ({
 }))
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .velo-icon {
     width: 100%;
     height: 100%;
