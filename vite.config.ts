@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import dts from 'vite-plugin-dts'
 import { resolve } from 'path'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -11,6 +12,14 @@ export default defineConfig({
             insertTypesEntry: true,
             include: ['src/**/*'],
             exclude: ['src/**/*.test.ts', 'src/**/*.test.vue']
+        }),
+        viteStaticCopy({
+            targets: [
+                {
+                    src: 'node_modules/velo-data-static/maps/*.json',
+                    dest: 'map'
+                }
+            ]
         })
     ],
     build: {

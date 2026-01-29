@@ -418,6 +418,8 @@ export interface ComponentProps {
     // 地图属性
     mapRegion?: string // 地图区域：china, beijing, shanghai 等（支持省份和城市）
     mapData?: Array<{ name: string; value: number }> // 地图数据
+    visualMin?: number // 视觉映射最小值
+    visualMax?: number // 视觉映射最大值
 
     // 城市地图属性
     provinceName?: string // 省份名称（旧版本兼容）
