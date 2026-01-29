@@ -1,0 +1,58 @@
+<template>
+    <a-switch v-model:checked="switchValue" :disabled="disabled" :size="switchSize" :checked-children="checkedChildren"
+        :un-checked-children="unCheckedChildren" class="velo-switch" @change="handleChange" />
+</template>
+
+<script setup lang="ts">
+import { ref, computed, watch } from 'vue'
+import { Switch as ASwitch } from 'ant-design-vue'
+import type { ComponentItem } from '../../types'
+
+export interface SwitchProps {
+    item: ComponentItem
+}
+
+const props = defineProps<SwitchProps>()
+const emit = defineEmits<{
+    change: [checked: boolean]
+}>()
+
+const switchValue = ref(props.item.props.checked || false)
+const disabled = computed(() => props.item.props.disabled || false)
+const switchSize = computed(() => props.item.props.switchSize || 'default')
+const checkedChildren = computed(() => props.item.props.checkedChildren)
+const unCheckedChildren = computed(() => props.item.props.unCheckedChildren)
+
+const handleChange = (checked: boolean) => {
+    emit('change', checked)
+}
+
+watch(() => props.item.props.checked, (newValue) => {
+    if (newValue !== switchValue.value) {
+        switchValue.value = newValue || false
+    }
+})
+</script>
+
+<style scoped>
+.velo-switch {
+    font-family: inherit;
+}
+
+:deep(.ant-switch) {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+:deep(.ant-switch-checked) {
+    background: linear-gradient(135deg, #409eff 0%, #66b1ff 100%);
+}
+
+:deep(.ant-switch:hover:not(.ant-switch-disabled)) {
+    box-shadow: 0 0 8px rgba(64, 158, 255, 0.4);
+}
+
+:deep(.ant-switch-inner) {
+    color: #ffffff;
+    font-size: 12px;
+}
+</style>

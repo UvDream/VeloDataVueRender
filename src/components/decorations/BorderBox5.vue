@@ -1,0 +1,98 @@
+<template>
+    <div class="border-box-5">
+        <div class="border-line top"></div>
+        <div class="border-line right"></div>
+        <div class="border-line bottom"></div>
+        <div class="border-line left"></div>
+        <div class="content">
+            <slot></slot>
+        </div>
+    </div>
+</template>
+
+<script setup lang="ts">
+import type { ComponentItem } from '../../types'
+
+export interface BorderBox5Props {
+    item: ComponentItem
+}
+
+defineProps<BorderBox5Props>()
+</script>
+
+<style scoped>
+.border-box-5 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.border-line {
+    position: absolute;
+    background: linear-gradient(90deg, transparent, #409eff, transparent);
+}
+
+.border-line.top,
+.border-line.bottom {
+    width: 100%;
+    height: 2px;
+    left: -100%;
+    animation: scan-horizontal 3s linear infinite;
+}
+
+.border-line.top {
+    top: 0;
+}
+
+.border-line.bottom {
+    bottom: 0;
+    animation-delay: 1.5s;
+}
+
+.border-line.left,
+.border-line.right {
+    width: 2px;
+    height: 100%;
+    top: -100%;
+    background: linear-gradient(180deg, transparent, #409eff, transparent);
+    animation: scan-vertical 3s linear infinite;
+}
+
+.border-line.left {
+    left: 0;
+    animation-delay: 0.75s;
+}
+
+.border-line.right {
+    right: 0;
+    animation-delay: 2.25s;
+}
+
+@keyframes scan-horizontal {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes scan-vertical {
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: 1px solid rgba(64, 158, 255, 0.3);
+}
+</style>

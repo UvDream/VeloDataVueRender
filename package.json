@@ -1,0 +1,74 @@
+{
+    "name": "velo-data-vue-render",
+    "version": "0.0.1",
+    "description": "A powerful data visualization renderer for Vue 3, supporting charts, 3D effects, and rich UI components",
+    "author": "ShutDown",
+    "license": "MIT",
+    "keywords": [
+        "vue",
+        "vue3",
+        "visualization",
+        "dashboard",
+        "echarts",
+        "threejs",
+        "data-visualization",
+        "charts",
+        "renderer"
+    ],
+    "main": "./dist/velo-data-vue-render.umd.js",
+    "module": "./dist/velo-data-vue-render.es.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/velo-data-vue-render.es.js",
+            "require": "./dist/velo-data-vue-render.umd.js",
+            "types": "./dist/index.d.ts"
+        },
+        "./style.css": {
+            "import": "./dist/velo-data-vue-render.css",
+            "require": "./dist/velo-data-vue-render.css",
+            "default": "./dist/velo-data-vue-render.css"
+        },
+        "./dist/style.css": "./dist/velo-data-vue-render.css",
+        "./dist/*": "./dist/*"
+    },
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "dev": "vite",
+        "build": "vue-tsc && vite build",
+        "preview": "vite preview",
+        "prepublishOnly": "npm run build"
+    },
+    "peerDependencies": {
+        "vue": "^3.3.0 || ^3.4.0"
+    },
+    "dependencies": {
+        "@ant-design/icons-vue": "^7.0.1",
+        "ant-design-vue": "^4.2.6",
+        "echarts": "^5.5.0",
+        "echarts-wordcloud": "^2.1.0",
+        "three": "^0.170.0"
+    },
+    "devDependencies": {
+        "@types/node": "^22.10.2",
+        "@types/three": "^0.170.0",
+        "@vitejs/plugin-vue": "^5.2.1",
+        "typescript": "~5.7.2",
+        "vite": "^6.0.5",
+        "vite-plugin-dts": "^4.3.0",
+        "vue": "^3.5.13",
+        "vue-tsc": "^2.1.10"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/UvDream/velo-data-vue-render.git"
+    },
+    "bugs": {
+        "url": "https://github.com/UvDream/velo-data-vue-render/issues"
+    },
+    "homepage": "https://github.com/UvDream/velo-data-vue-render#readme"
+}

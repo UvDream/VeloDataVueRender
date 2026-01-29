@@ -1,0 +1,78 @@
+<template>
+    <div class="border-box-3">
+        <svg class="border-svg">
+            <rect class="animated-border" x="1" y="1" :width="width - 2" :height="height - 2" />
+        </svg>
+        <div class="content">
+            <slot></slot>
+        </div>
+    </div>
+</template>
+
+<script setup lang="ts">
+import { ref, onMounted, onUnmounted } from 'vue'
+import type { ComponentItem } from '../../types'
+
+export interface BorderBox3Props {
+    item: ComponentItem
+}
+
+const props = defineProps<BorderBox3Props>()
+
+const width = ref(0)
+const height = ref(0)
+
+const updateDimensions = () => {
+    const el = document.querySelector('.border-box-3') as HTMLElement
+    if (el) {
+        width.value = el.offsetWidth
+        height.value = el.offsetHeight
+    }
+}
+
+onMounted(() => {
+    updateDimensions()
+    window.addEventListener('resize', updateDimensions)
+})
+
+onUnmounted(() => {
+    window.removeEventListener('resize', updateDimensions)
+})
+</script>
+
+<style scoped>
+.border-box-3 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.border-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.animated-border {
+    fill: none;
+    stroke: #409eff;
+    stroke-width: 2;
+    stroke-dasharray: 10, 5;
+    animation: dash 20s linear infinite;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: -1000;
+    }
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+</style>

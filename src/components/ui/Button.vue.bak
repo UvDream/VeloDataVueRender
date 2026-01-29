@@ -1,0 +1,56 @@
+<template>
+    <a-button :type="buttonType" :size="buttonSize" :disabled="disabled" :loading="loading" :ghost="ghost"
+        :danger="danger" class="velo-button" @click="handleClick">
+        {{ buttonText }}
+    </a-button>
+</template>
+
+<script setup lang="ts">
+import { computed } from 'vue'
+import { Button as AButton } from 'ant-design-vue'
+import type { ComponentItem } from '../../types'
+
+export interface ButtonProps {
+    item: ComponentItem
+}
+
+const props = defineProps<ButtonProps>()
+const emit = defineEmits<{
+    click: []
+}>()
+
+const buttonText = computed(() => props.item.props.buttonText || '按钮')
+const buttonType = computed(() => props.item.props.buttonType || 'primary')
+const btnSize = computed(() => props.item.props.btnSize || 'middle')
+const disabled = computed(() => props.item.props.disabled || false)
+const loading = computed(() => props.item.props.loading || false)
+const ghost = computed(() => props.item.props.ghost || false)
+const danger = computed(() => props.item.props.danger || false)
+
+const handleClick = () => {
+    emit('click')
+}
+</script>
+
+<style scoped>
+.velo-button {
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.velo-button:not(:disabled):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(64, 158, 255, 0.4);
+}
+
+/* 大屏风格增强 */
+:deep(.ant-btn-primary) {
+    background: linear-gradient(135deg, #409eff 0%, #66b1ff 100%);
+    border: none;
+    box-shadow: 0 2px 8px rgba(64, 158, 255, 0.3);
+}
+
+:deep(.ant-btn-primary):hover {
+    background: linear-gradient(135deg, #66b1ff 0%, #409eff 100%);
+}
+</style>
