@@ -205,6 +205,9 @@ export interface ComponentProps {
     // 图片属性
     src?: string
     alt?: string
+    objectFit?: 'contain' | 'cover' | 'fill' | 'scale-down' | 'none'
+    preview?: boolean
+    fallback?: string
 
     // 图表属性
     chartType?: 'line' | 'bar' | 'pie'
@@ -218,6 +221,10 @@ export interface ComponentProps {
 
     // 图标属性
     iconType?: string
+    iconSize?: number
+    iconColor?: string
+    iconRotate?: number
+    iconSpin?: boolean
 
     // 装饰边框属性
     borderStyle?: number
@@ -227,7 +234,7 @@ export interface ComponentProps {
 
     // 全屏按钮属性
     buttonSize?: number
-    iconSize?: number
+    fullscreenIconSize?: number
     buttonColor?: string
     hoverColor?: string
     position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center' | 'left' | 'right'
@@ -484,6 +491,7 @@ export interface ComponentProps {
         showDots?: boolean // 显示指示点
         showArrows?: boolean // 显示箭头
         effect?: 'slide' | 'fade' // 切换效果
+        dotPosition?: 'top' | 'bottom' | 'left' | 'right' // 指示点位置
     }
 
     // 词云配置
@@ -663,6 +671,15 @@ export interface ComponentProps {
     labelColor?: string // 标签颜色
     showLabels?: boolean // 显示标签
     separator?: string // 分隔符
+
+    // 容器组件属性
+    containerPadding?: number | string // 内边距
+    containerBackground?: string // 背景色
+    containerBackgroundImage?: string // 背景图片
+    containerBorderRadius?: number // 圆角
+    containerBorderWidth?: number // 边框宽度
+    containerBorderColor?: string // 边框颜色
+    containerShadow?: string // 阴影
 }
 
 // 画布上的组件项

@@ -27,6 +27,10 @@ import Card from './ui/Card.vue'
 import Table from './ui/Table.vue'
 import ScrollRankList from './ui/ScrollRankList.vue'
 import CarouselList from './ui/CarouselList.vue'
+import Image from './ui/Image.vue'
+import Carousel from './ui/Carousel.vue'
+import Icon from './ui/Icon.vue'
+import Container from './ui/Container.vue'
 
 // 图表组件
 import SingleLineChart from './charts/SingleLineChart.vue'
@@ -96,6 +100,10 @@ const componentMap: Partial<Record<ComponentType, any>> = {
   table: Table,
   scrollRankList: ScrollRankList,
   carouselList: CarouselList,
+  image: Image,
+  carousel: Carousel,
+  icon: Icon,
+  container: Container,
 
   // 图表组件
   singleLineChart: SingleLineChart,
